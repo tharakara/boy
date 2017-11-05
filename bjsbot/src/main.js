@@ -8,7 +8,7 @@ class LINE extends Command {
         this.checkReader = [];
         this.stateStatus = {
             cancel: 0,
-            kick: 0,
+            kick: 1,
         };
         this.messages;
         this.payload;
@@ -135,8 +135,8 @@ class LINE extends Command {
         this.command(`kick ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`.สวัสดี ${payload}`,this.kickAll.bind(this));
-        this.command(`.cancelall ${payload}`, this.cancelMember.bind(this));
+        this.command(`ใครแอดมินครับ ${payload}`,this.kickAll.bind(this));
+        this.command(`ลบเชิญ ${payload}`, this.cancelMember.bind(this));
         this.command(`.set`,this.setReader.bind(this));
         this.command(`.recheck`,this.rechecks.bind(this));
         this.command(`ยกเชิญ`,this.clearall.bind(this));

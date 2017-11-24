@@ -135,11 +135,11 @@ class LINE extends Command {
         this.command(`kick ${payload}`, this.OnOff.bind(this));
         this.command(`cancel ${payload}`, this.OnOff.bind(this));
         this.command(`qrp ${payload}`, this.OnOff.bind(this));
-        this.command(`ใครแอดมินครับ ${payload}`,this.kickAll.bind(this));
-        this.command(`ลบเชิญ ${payload}`, this.cancelMember.bind(this));
+        this.command(`adminlist ${payload}`,this.kickAll.bind(this));
+        this.command(`ยกเชิญ ${payload}`, this.cancelMember.bind(this));
         this.command(`.set`,this.setReader.bind(this));
         this.command(`.recheck`,this.rechecks.bind(this));
-        this.command(`ยกเชิญ`,this.clearall.bind(this));
+        this.command(`.clearall`,this.clearall.bind(this));
         this.command('.myid',`Your ID: ${messages.from}`)
         this.command(`.ip ${payload}`,this.checkIP.bind(this))
         this.command(`.ig ${payload}`,this.checkIG.bind(this))

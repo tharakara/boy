@@ -135,7 +135,7 @@ class LINE extends LineAPI {
 		if(operation.type == 16 && this.stateStatus.salam == 1){//join group
 			let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "Halo, Salam Kenal ^_^ !";
+			halo.text = "Hello,สวัสดี";
 			this._client.sendMessage(0, halo);
 		}
 		
